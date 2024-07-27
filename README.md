@@ -27,14 +27,14 @@ audio_segment.export("test_audio.wav", format="wav")
 ```
 ### Functionality
 
-    Text-to-Speech: Converts a given text into an MP3 file using Google Text-to-Speech (gTTS).
-    Format Conversion: Converts the generated MP3 file into a WAV file using pydub.
+Text-to-Speech: Converts a given text into an MP3 file using Google Text-to-Speech (gTTS).
+Format Conversion: Converts the generated MP3 file into a WAV file using pydub.
 
 Dependencies
 
-    gTTS
-    pydub
-    ffmpeg
+gTTS
+pydub
+ffmpeg
 
 ### 2- app.py
 #### Purpose
@@ -110,27 +110,27 @@ if __name__ == '__main__':
 ```
 ### Functionality
 
-    Speech-to-Text Endpoint (/voice-input):
-        Accepts audio data.
-        Converts the audio to text using Wav2Vec2.
-        Processes the text and generates a response.
-        Converts the response text back to audio and returns it.
+Speech-to-Text Endpoint (/voice-input):
+ Accepts audio data.
+ Converts the audio to text using Wav2Vec2.
+ Processes the text and generates a response.
+ Converts the response text back to audio and returns it.
 
-    Text-to-Speech Endpoint (/text-input):
-        Accepts JSON data containing text.
-        Processes the text and generates a response.
-        Returns the response as JSON.
+Text-to-Speech Endpoint (/text-input):
+ Accepts JSON data containing text.
+ Processes the text and generates a response.
+ Returns the response as JSON.
 
-    Text Processing:
-        Basic NLP logic to interpret and respond to the user's text.
+Text Processing:
+ Basic NLP logic to interpret and respond to the user's text.
 
 ### Dependencies
 
-    Flask
-    torch
-    transformers
-    soundfile
-    gTTS
+Flask
+torch
+transformers
+soundfile
+gTTS
 
 ### 3- test_flask.py
 #### Purpose
@@ -180,12 +180,12 @@ with open("response.wav", "wb") as response_audio:
 ```
 ### Functionality
 
-    Sends a POST request to the /voice-input endpoint with a sample WAV audio file.
-    Saves the audio response from the server as response.wav.
+Sends a POST request to the /voice-input endpoint with a sample WAV audio file.
+Saves the audio response from the server as response.wav.
 
 #### Dependencies
 
-    requests
+requests
 
 ### 5- validate_json.py
 #### Purpose
@@ -210,12 +210,12 @@ else:
 ```
 ### Functionality
 
-    Checks if response.json exists.
-    Validates the JSON structure and prints it.
-    Reports any errors in the JSON format.
+Checks if response.json exists.
+Validates the JSON structure and prints it.
+Reports any errors in the JSON format.
 
 #### Dependencies
 
-    json
-    os
+json
+os
     
